@@ -2,6 +2,7 @@
   "name": "bb10-development-workspace",
   "version": "0.1.0",
   "private": true,
+  "license": "MIT",
   "type": "module",
   "description": "Momentics-free BlackBerry 10 native development using the host Node.js",
   "engines": { "node": ">=20" },

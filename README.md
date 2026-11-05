@@ -62,6 +62,16 @@ npm run package:simulator
 
 [start_emulator_bb10.sh](start_emulator_bb10.sh)가 Passport 메뉴를 자동 선택합니다. 빌드 성공과 실제 기기 실행 성공은 별개입니다. 완전히 새로운 호스트의 복구에는 보존 이미지·라이브러리·준비된 USER 복사본이 추가로 필요하며 위 명령만으로 모든 자료가 만들어지는 것은 아닙니다.
 
+## 라이선스와 제3자 자료
+
+이 저장소에 포함된 **자체 작성 파일**(도구·스크립트·예제 앱·문서·설정 lock 파일)은 [MIT License](LICENSE)로 배포합니다. 이 라이선스는 아래 자료에는 적용되지 않으며, 각 자료는 원저작자의 조건을 따릅니다. 이들은 저장소에 포함되지 않고 로컬에서 별도로 준비합니다.
+
+- BlackBerry 10 SDK/NDK, 공식 x86 개발 시뮬레이터 이미지(VMDK), 그 안의 펌웨어·바이너리
+- QEMU, QEMU VMVGA, qemu-windows 패치, DXVK, Mesa 등 시뮬레이터 실행 소프트웨어
+- `config/references.lock.json`의 참조 저장소(예: `bbtube` Apache-2.0, `accupara/docker-images` GPL-3.0)와 SDK Docker 이미지
+
+`emulator/research/guest/`의 읽기 도구와 `patch_*` 스크립트는 코드 자체만 MIT입니다. 대상이 되는 BlackBerry 이미지와 추출물을 다룰 권리를 부여하지 않으며, 추출한 독점 파일은 재배포하지 않습니다. `emulator/research/audio/dds_abi.h`는 SDK 헤더와 QNX 오디오 DDK 문서에 맞춘 최소 선언입니다. `emulator/research/guest/pcnet-preserve-dwio-experiment.patch`는 MIT 조건의 QEMU `hw/net/pcnet.c`에 대한 패치입니다. 이는 법률 자문이 아니며 외부 자료의 배포 권한은 보장하지 않습니다.
+
 ## 상세 문서
 
 - [공유 자료 분석과 기술 선택](docs/analysis/ANALYSIS.ko.md)
