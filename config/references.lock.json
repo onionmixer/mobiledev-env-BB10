@@ -1,0 +1,43 @@
+{
+  "checkedAt": "2026-11-05",
+  "repositories": [
+    {
+      "url": "https://github.com/LianglRen/bb10-native-tools.git",
+      "path": "references/bb10-native-tools",
+      "commit": "c9b9f0034ca5e9f9c79a096a96c5aa04e74483f8",
+      "role": "User reference: build Unix tools to run on a BB10 device; requires existing NDK"
+    },
+    {
+      "url": "https://github.com/blackberry/bb10-webworks-framework.git",
+      "path": "references/bb10-webworks-framework",
+      "commit": "1a77b628613655283c201a7129c65f7f3f3bdec8",
+      "role": "User reference: legacy HTML5/native bridge framework"
+    },
+    {
+      "url": "https://github.com/AlexeyGurevsky/bbtube.git",
+      "path": "references/bbtube",
+      "commit": "4005ba34aaf1fadeb858cbfa3c5be1f817e18286",
+      "role": "User reference: Cascades native app structure; duplicate URL deduplicated"
+    },
+    {
+      "url": "https://github.com/accupara/docker-images.git",
+      "path": "references/accupara-docker-images",
+      "commit": "2a971db5dd238d49b2645d85842a5d3cce3e07a5",
+      "role": "Additional evidence: community SDK image source; scripts not executed"
+    },
+    {
+      "url": "https://github.com/XIAZY/blackberry10-toolchain.git",
+      "path": "references/blackberry10-toolchain",
+      "commit": "0384a8801ffe69162e548d58898d24d8e2a88426",
+      "role": "Additional research: modern Clang/CMake approach; not used for the baseline build"
+    }
+  ],
+  "web": [
+    "https://balika011.hu/blackberry/",
+    "https://balika011.hu/blackberry/firmwares/",
+    "https://balika011.hu/blackberry/firmwares/passport/",
+    "https://www.blackberry.com/en/secure-communications/support/end-of-life",
+    "https://www.blackberry.com/en/secure-communications/support/download-notice",
+    "https://developer.blackberry.com/devzone/files/design/bb10/UI_Guidelines_BlackBerry_10.pdf"
+  ]
+}

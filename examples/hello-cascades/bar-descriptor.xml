@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<qnx xmlns="http://www.qnx.com/schemas/application/1.0">
+    <id>com.example.bb10.hellocascades</id>
+    <name>Hello Cascades</name>
+    <versionNumber>0.1.0</versionNumber>
+    <buildId>1</buildId>
+    <description>BB10 C++ and QML development starter</description>
+    <author>BB10 Developer</author>
+    <initialWindow>
+        <autoOrients>true</autoOrients>
+        <systemChrome>none</systemChrome>
+    </initialWindow>
+    <configuration name="Device-Debug">
+        <platformArchitecture>armle-v7</platformArchitecture>
+        <asset path="HelloCascades" entry="true" type="Qnx/Elf">HelloCascades</asset>
+    </configuration>
+    <configuration name="Simulator-Debug">
+        <platformArchitecture>x86</platformArchitecture>
+        <asset path="HelloCascades" entry="true" type="Qnx/Elf">HelloCascades</asset>
+    </configuration>
+    <asset path="assets">assets</asset>
+    <permission system="true">run_native</permission>
+    <env var="LD_LIBRARY_PATH" value="app/native/lib:/usr/lib/qt4/lib"/>
+</qnx>

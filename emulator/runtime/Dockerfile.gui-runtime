@@ -1,0 +1,8 @@
+FROM bb10-vmvga-runtime:v1.03
+USER root
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    libgtk-3-0t64 libpulse0 libsndio7.0 \
+    && rm -rf /var/lib/apt/lists/*
+COPY qemu-system-x86_64-gtk /opt/vmvga/qemu-system-x86_64
+RUN /opt/vmvga/qemu-system-x86_64 -display help \
+    && /opt/vmvga/qemu-system-x86_64 -audio driver=help

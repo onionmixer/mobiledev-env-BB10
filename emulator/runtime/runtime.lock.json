@@ -1,0 +1,45 @@
+{
+  "recordedAt": "2026-11-05",
+  "image": "bb10-vmvga-runtime:v1.03",
+  "imageId": "sha256:8f36cd7be0c4af2ed72467de1fdeb71bbdf4d921f90f711d7f288cbefafbd358",
+  "imageBytes": 514483608,
+  "base": "amd64/debian@sha256:80655819b0590fe800f7bd538dfb9c4b798b1107cc1091fc96b9484f527da8dc",
+  "qemu": {
+    "asset": "https://github.com/qemus/qemu-vmvga/releases/download/v1.03/qemu-system-x86_64",
+    "sha256": "ce36d097fd0954ba64462decd0b6ffc2d5448dcb843b76f3c535bfa790c21599",
+    "reportedVersion": "QEMU emulator version 11.1.1 (qemu-windows 11.2.23)",
+    "containerPath": "/opt/vmvga/qemu-system-x86_64"
+  },
+  "virglOverride": {
+    "package": "libvirglrenderer1",
+    "version": "1.3.0-1",
+    "architecture": "amd64",
+    "source": "Debian signed unstable package index",
+    "packageSha256": "3ff4e9b5547e66cc27e3a016321bf9f62c214fbcaf3342b9a27d73937501b7fa",
+    "libraryPath": "/opt/virgl13/usr/lib/x86_64-linux-gnu",
+    "reason": "Debian13 system libvirglrenderer1 1.1.0 lacks virgl_renderer_resource_map_fixed required by prebuilt QEMU. The newer package is extracted separately."
+  },
+  "packageVersions": "emulator/evidence/vmvga-runtime-packages.txt",
+  "softwareVulkan": {
+    "icd": "/usr/share/vulkan/icd.d/lvp_icd.json",
+    "apiVersion": "1.4.305",
+    "device": "llvmpipe (LLVM 19.1.7, 256 bits)",
+    "driver": "Mesa 25.0.7-2+deb13u1",
+    "requiredExtensionsObserved": [
+      "VK_KHR_surface",
+      "VK_EXT_headless_surface",
+      "VK_KHR_maintenance5",
+      "VK_EXT_robustness2"
+    ],
+    "rawReport": "emulator/evidence/vmvga-runtime-vulkaninfo.txt"
+  },
+  "checks": {
+    "binaryHash": "passed",
+    "qemuVersionLaunch": "passed",
+    "vmvgaDeviceOptions": "passed",
+    "vulkanEnumeration": "passed",
+    "requiredVulkanExtensionPresence": "passed",
+    "guestBootTestedByThisRuntimeTask": false,
+    "dxvkDeviceCreationTestedByThisRuntimeTask": false
+  }
+}

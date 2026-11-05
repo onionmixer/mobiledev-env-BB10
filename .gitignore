@@ -1,0 +1,116 @@
+# External SDK, reference checkouts, downloaded packages and generated apps.
+# Keep version/URL/SHA lock JSON under config/ and emulator/config/ tracked.
+/sdk/
+/references/
+/downloads/
+/build/
+/.cache/
+
+# Proprietary simulator images, external libraries, QEMU sources and all runtime
+# artifacts/evidence/backups. Historical logs can contain host/auth information.
+/emulator/images/
+/emulator/lib/
+/emulator/downloads/
+/emulator/references/
+/emulator/build/
+/emulator/state/
+/emulator/evidence/
+/emulator/runtime/qemu-system-*
+
+# Local-only working files; intentionally excluded from commits.
+/HANDOFF.md
+a.txt
+
+# Machine-specific configuration and environment credentials.
+/config/local.env
+/config/device.json
+.env
+.env.*
+!.env.example
+!.env.template
+*.local.env
+.npmrc
+.netrc
+/.agents/
+/.codex/
+/.aws/
+/.azure/
+/.kube/
+/.docker/
+/.ssh/
+/.gnupg/
+
+# BB10 signing material and private keys/tokens. Examples remain text sources.
+*.bar
+*.p12
+*.pfx
+*.csk
+*.csj
+*.pem
+*.key
+*.keystore
+*.jks
+*.token
+id_rsa
+id_dsa
+id_ecdsa
+id_ed25519
+credentials.json
+
+# VM/firmware data and archives, even if accidentally copied outside the above
+# directories. Do not blanket-ignore PNG/WAV/QML/XML or lock JSON source assets.
+*.qcow
+*.qcow2
+*.vmdk
+*.vdi
+*.vhd
+*.vhdx
+*.raw
+*.iso
+*.ova
+*.vmem
+*.vmss
+*.nvram
+*.bin
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.7z
+
+# Compiled output, caches and local captures.
+node_modules/
+__pycache__/
+*.py[cod]
+*.o
+*.a
+*.so
+*.so.*
+*.dll
+*.exe
+*.class
+*.jar
+*.log
+*.pid
+*.sock
+*.pcap
+*.pcapng
+*.har
+*.core
+core.[0-9]*
+Xauthority
+.Xauthority
+known_hosts
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+*.sqlite
+*.sqlite3
+*.sqlite-wal
+*.sqlite-shm
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~

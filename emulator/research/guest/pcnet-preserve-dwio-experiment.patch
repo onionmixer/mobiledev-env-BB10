@@ -1,0 +1,12 @@
+--- a/hw/net/pcnet.c
++++ b/hw/net/pcnet.c
+@@ -679,8 +679,9 @@ static void pcnet_s_reset(PCNetState *s)
+     s->tdra = 0;
+     s->rap = 0;
+ 
+-    s->bcr[BCR_BSBC] &= ~0x0080;
++    /* BB10 experiment only: preserve DWIO across software reset.
++     * Real AMD S_RESET clears this bit; do not apply as a generic fix. */
+ 
+     s->csr[0]   = 0x0004;
+     s->csr[3]   = 0x0000;

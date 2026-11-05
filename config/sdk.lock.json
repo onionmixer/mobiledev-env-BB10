@@ -1,0 +1,12 @@
+{
+  "image": "accupara/bbndk@sha256:91268df2ead23a6fa9c17b600ffc6e04bf6b38eaa97f6a48c2f59ffc221ae6d2",
+  "imageSdkRoot": "/home/admin/bin/bbndk",
+  "host": "host_10_3_1_12/linux/x86",
+  "target": "target_10_3_1_995/qnx6",
+  "apiLevel": "10.3.1.995",
+  "hostVersion": "10.3.1.12",
+  "architecture": "armle-v7",
+  "source": "https://github.com/accupara/docker-images/tree/master/mobile/bb10/ndk",
+  "registryMetadata": "https://hub.docker.com/v2/repositories/accupara/bbndk/tags/latest",
+  "note": "Community-preserved SDK; digest fixes content, not publisher authenticity. Invoke CLI tools only; never start the image default command. Optional host/target extraction is available."
+}

@@ -1,0 +1,51 @@
+{
+  "qemuVersion": "QEMU emulator version 11.1.1 (bb10-vmvga-gtk)\nCopyright (c) 2003-2026 Fabrice Bellard and the QEMU Project developers",
+  "binary": "emulator/build/qemu-gui/qemu-system-x86_64-gtk",
+  "binarySha256": "a703a90d7eb3cc0212cbc52a1a2e02f6fc2b482f5aecb187d1dc920f4935697b",
+  "source": {
+    "pins": {
+      "qemu-helios": "6577af923eac07522b4a6879854f1469c48c5801",
+      "qemu-vmvga": "073c4dc64e49dd082c70f249dd883cba7ea93f43",
+      "qemu-windows": "21b0444a253624cf087d809e90f1c2caba392cc4"
+    },
+    "patches": [
+      "0001-hyperv-passthrough-exclusions.patch",
+      "0002-kvm-performance-cores.patch",
+      "0003-vmport-tss-user-io.patch",
+      "pcnet-preserve-dwio-experiment.patch"
+    ],
+    "display": [
+      "gtk"
+    ],
+    "pcnet": "preserve DWIO only across software reset",
+    "sdlDisabledReason": "Real SDL linked at process startup conflicts with VMVGA DXVK headless WSI",
+    "subprojects": {
+      "keycodemapdb": "f5772a62ec52591ff6870b7e8ef32482371f22c6",
+      "berkeley-softfloat-3": "b64af41c3276f97f0e181920400ee056b9c88037",
+      "berkeley-testfloat-3": "e7af9751d9f9fd3b47911f51a5cfd08af256a9ab",
+      "Vulkan-Headers": "8864cdc896bbc2a9b6eb36b3218fc9ef57908d77"
+    }
+  },
+  "features": {
+    "CONFIG_GTK": true,
+    "CONFIG_SDL": false,
+    "CONFIG_AUDIO_PA": true,
+    "CONFIG_OPENGL": true
+  },
+  "runtimeImage": "bb10-vmvga-gui:v1",
+  "packageVersions": "emulator/build/qemu-gui/runtime-packages.tsv",
+  "hostNodeChanged": false,
+  "hostSystemPackagesChanged": false,
+  "hostX11Authentication": "single-display cookie mounted read-only; no xhost access change",
+  "profile": "Passport Keyboard 1440x1440",
+  "guestZoom": 1.0,
+  "hostGtkScale": 0.5,
+  "vncEnabled": false,
+  "firmwareOriginalWritten": false,
+  "kvmRuntime": {
+    "enabled": true,
+    "present": true
+  },
+  "runtimeImageId": "sha256:214b9d876f5d00877e7ea698104ca6b38411955400ea65e48380e83e7da882a2",
+  "builderImageId": "sha256:a37ad122d4f369d2b156d753cce003e660e2dab58f7d426557f7e7be54cb96c6"
+}

@@ -1,0 +1,11 @@
+{
+  "version": "10.3.1.2558",
+  "architecture": "x86",
+  "file": "BlackBerry10Simulator-Installer-BB10_3_1-2558-Linux-201503060031.bin",
+  "bytes": 1166574715,
+  "sha1": "b99bc314e9b9840942057f508e87054874ad5ea6",
+  "url": "https://archive.lunar-project.org/BlackBerry%2010/Simulators/BlackBerry10Simulator-Installer-BB10_3_1-2558-Linux-201503060031.bin",
+  "metadata": "https://archive.org/metadata/blackberry10-device-simulator",
+  "guide": "https://developer.blackberry.com/devzone/files/develop/simulator/BB10_Device_Simulator_UG.pdf",
+  "note": "Official x86 simulator preserved by third parties. This is not Passport ARM firmware. QEMU graphics/runtime compatibility requires separate validation."
+}

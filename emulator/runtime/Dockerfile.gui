@@ -1,0 +1,15 @@
+FROM bb10-vmvga-runtime:v1.03 AS build-env
+
+USER root
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    build-essential meson ninja-build pkg-config git \
+    python3 python3-venv python3-yaml python3-mako \
+    libglib2.0-dev libpixman-1-dev zlib1g-dev libgtk-3-dev libsdl2-dev \
+    libslirp-dev libepoxy-dev libpng-dev libvulkan-dev libfdt-dev libzstd-dev \
+    && rm -rf /var/lib/apt/lists/*
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    libpulse-dev python3-wheel python3-setuptools \
+    && rm -rf /var/lib/apt/lists/*
+
+ENTRYPOINT ["/bin/bash"]
