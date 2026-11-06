@@ -245,3 +245,11 @@ QCOW2 다섯 개의 절대 backing 경로는 `qemu-img rebase -u`로 새 위치�
 라이선스는 검토 후 사용자가 **MIT**를 선택했습니다. 근거는 저장소가 자체 작성 스크립트·문서·작은 예제 중심이고 외부 소스를 포함하지 않으며, 패치 대상인 QEMU `hw/net/pcnet.c`의 헤더(로컬 고정 소스에서 확인)도 MIT 조건이라는 점입니다. Apache-2.0은 특허 조항과 참조 생태계와의 일치가 장점인 대안이었습니다. 저작권자 표기는 사용자의 별도 지정이 없어 git 작성자인 `Peter Yoo`, 연도 2026으로 했습니다.
 
 `LICENSE`를 추가하고 `package.json`에 `license` 필드를 넣었으며(`private`은 유지), README에 제3자 자료(SDK·시뮬레이터 이미지·QEMU 계열·참조 저장소)가 적용 대상이 아님을 명시했습니다. 리버스 엔지니어링 도구는 코드만 MIT이며 대상 이미지를 다룰 권리를 주지 않는다는 단서도 기록했습니다. `dds_abi.h`의 SDK 헤더 파생 정도는 법적으로 확정하지 않았고 최소 선언이라는 사실만 적었습니다.
+
+## 24. 저장소 공개 전환
+
+사용자 요청으로 `mobiledev-env-BB10`을 private에서 **public**으로 전환했습니다. 23절의 "private으로 게시"는 첫 push 시점의 상태이며 이 전환으로 현재 상태와 달라졌습니다. 이전 문장은 당시 기록으로 유지합니다.
+
+공개 직후 `gh repo view`는 즉시 `isPrivate: false`를 반환했지만 비로그인 요청은 몇 초간 404였고, 이후 HTTP 200과 공개 API의 `visibility: public`, 라이선스 `MIT`를 확인했습니다. 라이선스 감지는 첫 push 직후에는 `null`이었다가 이 시점에 반영됐습니다. 공개 범위는 커밋 2개의 파일 70개이며 SDK·VM 이미지·QEMU 소스·증거 로그·`HANDOFF.md`는 포함하지 않습니다. 제한된 패턴 검사는 모든 비밀 정보·라이선스 문제를 보증하지 않으며, `dds_abi.h`의 SDK 헤더 파생 정도는 법적으로 확정하지 않았습니다.
+
+사용한 `gh`에는 `--accept-visibility-change-consequences` 플래그가 없어 `gh repo edit <repo> --visibility public`으로 전환했습니다.
